@@ -1,0 +1,239 @@
+<!Doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ηλιακό Σύστημα</title>
+        <style>
+        :root {
+            --green: #7CFF6B;
+            --green-dark: #41A336;
+            --text: #D8FFD2;
+            --panel: rgba(15, 27, 18, 0.92);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 28px;
+            color: var(--text);
+            background:
+                radial-gradient(circle at top, rgba(62, 120, 70, 0.22), transparent 35%),
+                linear-gradient(135deg, #050806, #101b12);
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.7;
+        }
+
+        h1 {
+            margin: 0 0 24px;
+            padding: 18px;
+            text-align: center;
+            color: var(--green);
+            font-size: clamp(2rem, 6vw, 3.2rem);
+            letter-spacing: 2px;
+            border: 1px solid rgba(124, 255, 107, 0.45);
+            border-radius: 18px;
+            background: rgba(8, 16, 10, 0.75);
+            box-shadow: 0 0 25px rgba(124, 255, 107, 0.12);
+        }
+
+        h2 {
+            margin: 28px 0 10px;
+            color: var(--green);
+            border-bottom: 2px solid var(--green-dark);
+            padding-bottom: 6px;
+        }
+
+        p {
+            padding: 14px 18px;
+            background: var(--panel);
+            border-left: 4px solid var(--green-dark);
+            border-radius: 8px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 12px;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            text-align: center;
+            padding: 12px;
+            color: var(--green);
+            font-weight: bold;
+            background: rgba(17, 38, 22, 0.95);
+            border: 1px solid rgba(124, 255, 107, 0.35);
+            border-radius: 10px;
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            border-bottom: 1px dotted var(--green);
+        }
+
+        a:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
+        }
+
+        svg {
+            border: 1px solid rgba(124, 255, 107, 0.3);
+            border-radius: 16px;
+            background: transparent;
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+        }
+
+        .planet-hotspot {
+            fill: transparent;
+            stroke: transparent;
+            stroke-width: 3;
+            cursor: pointer;
+        }
+
+        .planet-hotspot:hover {
+            stroke: #7CFF6B;
+        }
+
+        .planet-map {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            image-rendering: auto;
+        }
+
+        .planet-map image {
+            shape-rendering: geometricPrecision;
+            image-rendering: auto;
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            margin: 30px 0 10px;
+            background: linear-gradient(to right, transparent, var(--green-dark), transparent);
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 14px;
+            }
+
+            p {
+                padding: 12px;
+            }
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Ηλιακο Συστημα</h1>
+        <p>
+        Το Ηλιακό Σύστημα περιλαμβάνει τον Ήλιο και όλα τα αντικείμενα τα οποία κινούνται σε τροχιά γύρω από αυτόν μέσα στο πεδίο βαρύτητάς του,
+        είτε περιστρεφόμενα άμεσα γύρω από αυτόν είτε κινούμενα σε τροχιές γύρω από άλλα σώματα που κινούνται γύρω από τον Ήλιο.
+        Από τα αντικείμενα που περιστρέφονται απευθείας γύρω από τον Ήλιο, τα μεγαλύτερα είναι οι οκτώ πλανήτες, με τα υπόλοιπα να είναι μικρότερα αντικείμενα,
+        όπως οι νάνοι πλανήτες και τα μικρά σώματα του Ηλιακού Συστήματος. Τα αντικείμενα που περιστρέφονται έμμεσα γύρω από τον Ήλιο λέγονται φυσικοί δορυφόροι,
+        δύο εκ των οποίων είναι μεγαλύτεροι από τον μικρότερο πλανήτη, τον Ερμή. Το ηλιακό σύστημα σχηματίστηκε 4,6 δισεκατομμύρια χρόνια πριν, από τη βαρυτική κατάρρευση ενός γιγαντιαίου διαστρικού μοριακού νέφους.
+        Η κατάρρευση του νεφελώματος συνήθως συμβαίνει από την έκρηξη σουπερνόβα κάποιου κοντινού άστερα.
+        </p>
+
+
+        <h2>Εσωτερικοί Πλανήτες:</h2>
+        <p>Οι εσωτερικοί πλανήτες (ή γήινοι / βραχώδεις πλανήτες) είναι οι τέσσερις πλανήτες του ηλιακού μας συστήματος που βρίσκονται πιο κοντά στον Ήλιο, πριν από τη ζώνη των αστεροειδών.
+            Σε αντίθεση με τους εξωτερικούς πλανήτες, χαρακτηρίζονται από τη συμπαγή, στερεή και βραχώδη επιφάνειά τους.</p><p>
+            <ul>
+                <li>Ερμής</li>
+                <li>Αφροδίτη</li>
+                <li>Γη</li>
+                <li>Αρης</li>
+            </ul>
+
+
+        <h2>Εξωτερικοι πλανητες:</h2>
+    <p>Ως εξωτερικοί πλανήτες (ή γίγαντες αερίων και πάγου) του ηλιακού μας συστήματος ορίζονται οι τέσσερις μεγάλοι πλανήτες που βρίσκονται πέρα από τη ζώνη των αστεροειδών.
+        Σε αντίθεση με τους εσωτερικούς, βραχώδεις πλανήτες (Ερμής, Αφροδίτη, Γη, Άρης),
+        οι εξωτερικοί πλανήτες δεν διαθέτουν στερεή επιφάνεια και αποτελούνται κυρίως από αέρια και παγωμένα στοιχεία.</p>
+    <ul>
+        <li>Διας</li>
+        <li>Κρονος</li>
+        <li>Ουρανος</li>
+        <li>Ποσειδωνας</li>
+    </ul>
+
+    <h2>Διαστιμικη εξερευνηση στο ηλιακο συστημα:</h2>
+    <p>Η εξερεύνηση του ηλιακού συστήματος πραγματοποιείται με τη χρήση τηλεσκοπίων, μη επανδρωμένων αποστολών και ρομποτικών διαστημοσυσκευών.
+        Παράλληλα, κατά το διάστημα 1969–1972 πραγματοποιήθηκαν έξι επανδρωμένες προσεδαφίσεις στη Σελήνη στο πλαίσιο του προγράμματος Apollo,
+        ενώ η ανθρώπινη δραστηριότητα σε χαμηλή γήινη τροχιά διατηρείται αδιάλειπτα μέσω του Διεθνούς Διαστημικού Σταθμού.</p>
+
+    
+    <p>Κανε κλικ σε εναν οποιοδηποτε πλανητη για να διαβασετε την Βικιπαιδια του.</p> 
+  <svg class="planet-map" viewBox="0 0 1000 351" role="img" aria-label="Ηλιακό Σύστημα">
+  
+  <image href="hliako_systima_2.jpg" width="1000" height="351" />
+
+  <a href="https://el.wikipedia.org/wiki/%CE%89%CE%BB%CE%B9%CE%BF%CF%82" target="_blank">
+    <title>Ήλιος</title>
+    <circle cx="-130" cy="175" r="220" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%95%CF%81%CE%BC%CE%AE%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Ερμής</title>
+    <circle cx="115" cy="179" r="14" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%91%CF%86%CF%81%CE%BF%CE%B4%CE%AF%CF%84%CE%B7_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Αφροδίτη</title>
+    <circle cx="170" cy="177" r="23" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%93%CE%B7" target="_blank">
+    <title>Γη</title>
+    <circle cx="243" cy="177" r="26" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%93%CE%B7" target="_blank">
+    <title>Γη</title>
+    <circle cx="243" cy="177" r="26" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%86%CF%81%CE%B7%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Άρης</title>
+    <circle cx="316" cy="177" r="20" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%94%CE%AF%CE%B1%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Δίας</title>
+    <circle cx="445" cy="177" r="98" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%9A%CF%81%CF%8C%CE%BD%CE%BF%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Κρόνος</title>
+    <circle cx="628" cy="177" r="65" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%9F%CF%85%CF%81%CE%B1%CE%BD%CF%8C%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Ουρανός</title>
+    <circle cx="779" cy="177" r="48" class="planet-hotspot" />
+  </a>
+
+  <a href="https://el.wikipedia.org/wiki/%CE%A0%CE%BF%CF%83%CE%B5%CE%B9%CE%B4%CF%8E%CE%BD%CE%B1%CF%82_(%CF%80%CE%BB%CE%B1%CE%BD%CE%AE%CF%84%CE%B7%CF%82)" target="_blank">
+    <title>Ποσειδώνας</title>
+    <circle cx="894" cy="177" r="42" class="planet-hotspot" />
+  </a>
+
+</svg>
+<hr>
+        <p style="text-align:center">© 2024 Εξερεύνηση του Ηλιακού Συστήματος</p>
+        <br>
+        <p style="text-align: center;">Πηγή: <a href="https://el.wikipedia.org/wiki/%CE%97%CE%BB%CE%B9%CE%B1%CE%BA%CF%8C_%CF%83%CF%8D%CF%83%CF%84%CE%B7%CE%BC%CE%B1" target="_blank">Βικιπαιδια</a></p>
+
+</body>
+ </html>
